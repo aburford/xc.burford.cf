@@ -1,0 +1,20 @@
+- mail = ""
+- @all_members.each do |m|
+	- mail += m.email + ";"
+= link_to "Email Everyone", "mailto:" + mail
+%br
+%br
+= link_to "New Member", new_member_path
+%h1 All Members
+%table
+	- i = 0
+	- @all_members.each do |m|
+		- i = i + 1
+		%tr
+			%td= i
+			%td= link_to m.firstname + " " + m.lastname, m
+			%td= link_to m.email, "mailto:" + m.email
+			- if m.grade == nil
+				%td= "Coach"
+			- else
+				%td= m.grade

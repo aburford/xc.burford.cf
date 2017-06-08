@@ -1,0 +1,7 @@
+.flex-container
+	%header
+		= link_to "Back", members_path
+		%h1= @member.firstname + " " + @member.lastname
+	.info
+		%p= link_to @member.email, ("mailto:" + @member.email)
+		%p= @member.grade
