@@ -3,8 +3,24 @@ class MembersController < ApplicationController
 
 	end
 
+	def download
+		require 'csv'
+		CSV.open("app/assets/data/emails.csv", "wb") do |csv|
+			csv << %w(Name Email Grade)
+			Member.order(grade: :desc, firstname: :asc).all.each do |m|
+				csv << [m.name, m.email, m.grade]
+			end
+		end
+		send_file "#{Rails.root}/app/assets/data/emails.csv", x_sendfile: true
+	end
+
 	def index
-		@all_members = Member.order(grade: :desc, firstname: :asc).all
+		mem = Member.order(grade: :desc, firstname: :asc).all
+		@mail = "mailto:"
+		mem.each do |m|
+			@mail += m.email + ","
+		end
+		@all_members = mem
 	end
 
 	def show
