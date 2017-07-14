@@ -55,3 +55,4 @@ gem 'haml'
 gem 'thin'
 gem 'whenever', :require => false
 gem 'http'
+gem 'dotenv-rails'

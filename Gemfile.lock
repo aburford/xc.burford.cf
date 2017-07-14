@@ -56,6 +56,10 @@ GEM
     daemons (1.2.4)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     eventmachine (1.2.1)
     execjs (2.7.0)
@@ -185,6 +189,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  dotenv-rails
   haml
   http
   jbuilder (~> 2.5)
