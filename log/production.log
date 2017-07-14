@@ -1,0 +1,65 @@
+D, [2017-07-14T07:57:57.599240 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'burfordan' LIMIT 1[0m
+D, [2017-07-14T07:57:58.043187 #21626] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.136632 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 6 LIMIT 1[0m
+D, [2017-07-14T07:57:58.215578 #21626] DEBUG -- :   [1m[36mRun Exists (8.7ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 6 LIMIT 1[0m
+D, [2017-07-14T07:57:58.229248 #21626] DEBUG -- :   [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (9.5, 3997, 'Run at home', 'I haven\'t ran this deep into raptor woods in a while. I did the largest loop possible on the trails that I knew and it ended up being 9 miles so I added a half mile at the end. I guess if I had kept running on the trail, I could have made it closer to 10 miles but that would include over a half mile of running back on the same trail I ran on at the beginning of the run and the goal was to maximize distance ran on a trail without redoing sections of trail. For the first 15 minutes of my run I got to experience the middle of one of the thunderstorms and it was awesome and exhilarating. Unfortunately, for the rest of the run it was just a light drizzle. But there were tons of fallen trees and branches laying on the trail and in the woods. While passing some of them I could even smell the strong scent of freshly cut wood.\r\n', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 6, 0)[0m
+D, [2017-07-14T07:57:58.339748 #21626] DEBUG -- :   [1m[35m (107.4ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.346309 #21626] DEBUG -- :   [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Carpenteria18' LIMIT 1[0m
+D, [2017-07-14T07:57:58.353552 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'ChenMa' LIMIT 1[0m
+D, [2017-07-14T07:57:58.361204 #21626] DEBUG -- :   [1m[36mMember Load (1.9ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'CoachFaitsch' LIMIT 1[0m
+D, [2017-07-14T07:57:58.365382 #21626] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.373996 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 56 LIMIT 1[0m
+D, [2017-07-14T07:57:58.388219 #21626] DEBUG -- :   [1m[36mRun Exists (7.3ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 56 LIMIT 1[0m
+D, [2017-07-14T07:57:58.398856 #21626] DEBUG -- :   [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (3.4, 0, 'country day', '', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 56, 0)[0m
+D, [2017-07-14T07:57:58.429550 #21626] DEBUG -- :   [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.437342 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Connor_Visnic' LIMIT 1[0m
+D, [2017-07-14T07:57:58.441563 #21626] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.449844 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 7 LIMIT 1[0m
+D, [2017-07-14T07:57:58.459928 #21626] DEBUG -- :   [1m[36mRun Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 7 LIMIT 1[0m
+D, [2017-07-14T07:57:58.470417 #21626] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (4.0, 1696, 'Treadmill', 'Ran on the treadmill today. Felt decent \r\n', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 7, 0)[0m
+D, [2017-07-14T07:57:58.499612 #21626] DEBUG -- :   [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.506062 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Blanchetteco20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.513256 #21626] DEBUG -- :   [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'DillJa' LIMIT 1[0m
+D, [2017-07-14T07:57:58.520517 #21626] DEBUG -- :   [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'DillJo' LIMIT 1[0m
+D, [2017-07-14T07:57:58.531897 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'floydma' LIMIT 1[0m
+D, [2017-07-14T07:57:58.538499 #21626] DEBUG -- :   [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'fordjo' LIMIT 1[0m
+D, [2017-07-14T07:57:58.544979 #21626] DEBUG -- :   [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Fordry' LIMIT 1[0m
+D, [2017-07-14T07:57:58.555203 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'gadar' LIMIT 1[0m
+D, [2017-07-14T07:57:58.561635 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'GrossJa' LIMIT 1[0m
+D, [2017-07-14T07:57:58.568763 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'barrosoju20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.576372 #21626] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.584118 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 24 LIMIT 1[0m
+D, [2017-07-14T07:57:58.597476 #21626] DEBUG -- :   [1m[36mRun Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 24 LIMIT 1[0m
+D, [2017-07-14T07:57:58.610980 #21626] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (6.0, 0, '', 'At home\r\n', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 24, 0)[0m
+D, [2017-07-14T07:57:58.640146 #21626] DEBUG -- :   [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.646523 #21626] DEBUG -- :   [1m[36mMember Load (1.9ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'KyJason' LIMIT 1[0m
+D, [2017-07-14T07:57:58.652740 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'liamp0119' LIMIT 1[0m
+D, [2017-07-14T07:57:58.663536 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Mahlersa' LIMIT 1[0m
+D, [2017-07-14T07:57:58.667526 #21626] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.675785 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 19 LIMIT 1[0m
+D, [2017-07-14T07:57:58.691754 #21626] DEBUG -- :   [1m[36mRun Exists (6.2ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 19 LIMIT 1[0m
+D, [2017-07-14T07:57:58.701930 #21626] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (5.5, 0, 'Run from home', 'left knee hurts. i hate runs @ home\r\n', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 19, 0)[0m
+D, [2017-07-14T07:57:58.730967 #21626] DEBUG -- :   [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.740307 #21626] DEBUG -- :   [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Martijaan20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.746945 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'matteija' LIMIT 1[0m
+D, [2017-07-14T07:57:58.753740 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'mckeonwi' LIMIT 1[0m
+D, [2017-07-14T07:57:58.763526 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Neelamsa20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.769797 #21626] DEBUG -- :   [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'nemeceklu' LIMIT 1[0m
+D, [2017-07-14T07:57:58.776415 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'paragassp19' LIMIT 1[0m
+D, [2017-07-14T07:57:58.786485 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'RicciardiNick' LIMIT 1[0m
+D, [2017-07-14T07:57:58.793400 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Royty' LIMIT 1[0m
+D, [2017-07-14T07:57:58.800420 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'saubermanbe' LIMIT 1[0m
+D, [2017-07-14T07:57:58.810583 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'leese20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.816547 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'shepardsp' LIMIT 1[0m
+D, [2017-07-14T07:57:58.823115 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'MiddleEasternBoi' LIMIT 1[0m
+D, [2017-07-14T07:57:58.833604 #21626] DEBUG -- :   [1m[36mMember Load (1.7ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'stardellisna' LIMIT 1[0m
+D, [2017-07-14T07:57:58.840278 #21626] DEBUG -- :   [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'SugarmannDa' LIMIT 1[0m
+D, [2017-07-14T07:57:58.851708 #21626] DEBUG -- :   [1m[36mMember Load (1.5ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'sugarmannjo' LIMIT 1[0m
+D, [2017-07-14T07:57:58.855552 #21626] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-14T07:57:58.863436 #21626] DEBUG -- :   [1m[36mMember Load (1.4ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`id` = 16 LIMIT 1[0m
+D, [2017-07-14T07:57:58.878022 #21626] DEBUG -- :   [1m[36mRun Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM `runs` WHERE `runs`.`date` = '2017-07-13' AND `runs`.`member_id` = 16 LIMIT 1[0m
+D, [2017-07-14T07:57:58.888162 #21626] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `runs` (`distance`, `duration`, `title`, `note`, `created_at`, `updated_at`, `date`, `member_id`, `days_late`) VALUES (4.2, 2080, 'Home Run to Dodge the Rain', 'I\'m disappointed that I didn\'t get to run in the rain, but I\'m happy that I could catch s break in the storm and still get a run in today. Good pacing. First half: 17:25. Second half: 17:15. Only ran the shorter boring home run cuz my parents told me it was too unsafe to run alone in the woods on account of falling trees :( \r\n', '2017-07-14 11:57:58', '2017-07-14 11:57:58', '2017-07-13', 16, 0)[0m
+D, [2017-07-14T07:57:58.920825 #21626] DEBUG -- :   [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-14T07:57:58.927091 #21626] DEBUG -- :   [1m[36mMember Load (1.8ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'TomAn' LIMIT 1[0m
+D, [2017-07-14T07:57:58.933695 #21626] DEBUG -- :   [1m[36mMember Load (1.6ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'vilayin20' LIMIT 1[0m
+D, [2017-07-14T07:57:58.940686 #21626] DEBUG -- :   [1m[36mMember Load (1.9ms)[0m  [1m[34mSELECT  `members`.* FROM `members` WHERE `members`.`username` = 'Zhongri' LIMIT 1[0m
