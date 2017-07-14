@@ -1,0 +1,14 @@
+= link_to "Back", stats_root_path
+%h1 LogARun Stats
+- @days.each_with_index do |run, i|
+	%h2= i == 0 ? "People who logged yesterday:" : "People who logged #{i + 1} days ago:"
+	%table
+		%tr
+			%td	
+				%b Name
+			%td
+				%b Days Late
+		- run.each do |r|
+			%tr
+				%td= r.member.name
+				%td= r.days_late == 0 ? 'On Time' : r.days_late

@@ -1,7 +1,10 @@
-- mail = ""
-- @all_members.each do |m|
-	- mail += m.email + ";"
-= link_to "Email Everyone", "mailto:" + mail
+= link_to "Back", root_path
+%br
+%br
+= link_to "Email Everyone", @mail
+%br
+%br
+= link_to "Download as CSV", download_csv_path
 %br
 %br
 = link_to "New Member", new_member_path
@@ -14,7 +17,5 @@
 			%td= i
 			%td= link_to m.firstname + " " + m.lastname, m
 			%td= link_to m.email, "mailto:" + m.email
-			- if m.grade == nil
-				%td= "Coach"
-			- else
-				%td= m.grade
+			%td= m.grade || "Coach"
+			%td= 'FORGOT TO LOG YESTERDAY' unless m.logged_yesterday?

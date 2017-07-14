@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605175154) do
+ActiveRecord::Schema.define(version: 20170713234617) do
 
   create_table "members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "firstname"
@@ -19,15 +19,21 @@ ActiveRecord::Schema.define(version: 20170605175154) do
     t.integer  "grade"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "username"
   end
 
-  create_table "runners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "email"
-    t.integer  "grade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "runs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.float    "distance",   limit: 24
+    t.integer  "duration"
+    t.string   "title"
+    t.text     "note",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.date     "date"
+    t.integer  "member_id"
+    t.integer  "days_late"
+    t.index ["member_id"], name: "index_runs_on_member_id", using: :btree
   end
 
+  add_foreign_key "runs", "members"
 end
