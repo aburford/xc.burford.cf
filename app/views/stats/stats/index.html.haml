@@ -1,9 +1,9 @@
 = link_to "Back", root_path
 %h1 Statistics
-%p= "Everyone currently on the 2017 Amity XC team has ran a combined total of #{@tot_dist} miles since joining the team."
-%p= "That's #{(@tot_dist / 24901).round 3} times around the earth."
-%p= "We have ran a combined total of #{(@tot_dur / 86400.0).round 2} days straight."
-%p= "We run an average of #{@dist_avg.round 2} miles a day."
-%p= "We run for an average of #{@dur_avg.round 2} minutes a day."
-%p= "Our average pace is #{@pace_avg} minutes per mile."
+%p= "Everyone currently on the 2017 Amity XC team has ran a combined total of #{@vals[:tot_dist]} miles since joining the team."
+%p= "That's #{(@vals[:tot_dist] / 24901).round 3} times around the earth."
+%p= "We have ran a combined total of #{(@vals[:tot_dur] / 86400.0).round 2} days straight."
+%p= "We run an average of #{@vals[:avg_dist]} miles a day."
+%p= "We run for an average of #{@vals[:avg_dur]} minutes a day."
+%p= "Our average pace is #{@vals[:avg_pace]} minutes per mile."
 = link_to "View LogARun stats", stats_logarun_path
