@@ -19,8 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :environment, 'development'
-
 every 1.day, :at => '11:50 pm' do
   rake 'post_check:midnight'
 end
