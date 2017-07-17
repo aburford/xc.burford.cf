@@ -26,6 +26,7 @@ class MembersController < ApplicationController
 	def show
 		@mem = Member.find(params[:id])
 		@vals = MemCalc.vals_for @mem
+		@logs = @mem.days_late
 	end
 
 	def create

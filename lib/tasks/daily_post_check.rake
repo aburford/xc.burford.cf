@@ -27,7 +27,7 @@ namespace :post_check do
 	end
 
 	def save_runs(date, days_late)
-		i = date.sunday? ? 7 : date.wday
+		i = date.cwday
 		auth = "01017648C54358C8D408FE76088CBC29E7D508000942007500720066006F007200640061006E0000012F00FF"
 		@doc = Nokogiri::HTML(HTTP.cookies(:sqlAuthCookie => auth).get("http://www.logarun.com/TeamCalendar.aspx?teamid=743&date=#{date.strftime('%m-%d-%Y')}").to_s) if @doc && date.sunday? || @doc.nil?
 		@doc.css(".monthDay:nth-of-type(#{i})").each do |post|

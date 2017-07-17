@@ -7,3 +7,16 @@
 %p= "Average distance per run: #{@vals[:avg_dist]} miles"
 %p= "Average duration per run: #{@vals[:avg_dur]}"
 %p= "Average pace per run: #{@vals[:avg_pace]}"
+%h2 LogARun posts:
+%table
+	%tr
+		%td
+			%b Weekday
+		%td
+			%b Days Late
+	- day = Date.today.prev_day
+	- @logs.each do |l|
+		%tr
+			%td= "#{day.strftime '%A'}"
+			%td= l
+		- day -= 1

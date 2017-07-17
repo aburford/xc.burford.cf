@@ -49,7 +49,7 @@ class MemCalc < ApplicationRecord
 	private 
 
 	def self.format_pace(seconds)
-		"#{(seconds / 60).round}:#{(seconds % 60).round.to_s.rjust(2, '0')}"
+		"#{(seconds.round / 60)}:#{(seconds % 60).round.to_s.rjust(2, '0')}"
 	end
 
 end
