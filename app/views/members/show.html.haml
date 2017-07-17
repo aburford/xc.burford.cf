@@ -1,4 +1,9 @@
 = link_to "Back", members_path
-%h1= @member.firstname + " " + @member.lastname
-%p= link_to @member.email, ("mailto:" + @member.email)
-%p= @member.grade
+%h1= @mem.name
+%p= "Email: #{link_to @mem.email, ("mailto:" + @mem.email)}".html_safe
+%p= "Grade: #{@mem.grade}"
+%p= "Total distance ran: #{@vals[:tot_dist]} miles"
+%p= "Total time spent running: #{(@vals[:tot_dur] / 86400.0).round 2} days"
+%p= "Average distance per run: #{@vals[:avg_dist]} miles"
+%p= "Average duration per run: #{@vals[:avg_dur]}"
+%p= "Average pace per run: #{@vals[:avg_pace]}"

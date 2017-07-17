@@ -22,7 +22,7 @@ class Stats::StatsController < ApplicationController
 		# end
 		# p = t / d
 		# @pace_avg = "#{(p / 60).round}:#{(p % 60).round}"
-		@vals = Calculation.all_vals true
+		@vals = TeamCalc.all_vals true
 	end
 
 	def logarun

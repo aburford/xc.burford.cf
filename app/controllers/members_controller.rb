@@ -24,7 +24,8 @@ class MembersController < ApplicationController
 	end
 
 	def show
-		@member = Member.find(params[:id])
+		@mem = Member.find(params[:id])
+		@vals = MemCalc.vals_for @mem
 	end
 
 	def create

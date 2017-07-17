@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CalculationTest < ActiveSupport::TestCase
+class MemCalcTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
