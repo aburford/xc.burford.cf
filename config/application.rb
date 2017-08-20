@@ -13,5 +13,6 @@ module Xc
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Eastern Time (US & Canada)'
     config.active_record.default_timezone = :local
+    config.public_file_server.enabled = true
   end
 end
