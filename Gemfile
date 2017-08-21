@@ -56,3 +56,6 @@ gem 'thin'
 gem 'whenever', :require => false
 gem 'http'
 gem 'dotenv-rails'
+gem 'opal-rails'
+gem 'opal'
+gem 'opal-jquery'

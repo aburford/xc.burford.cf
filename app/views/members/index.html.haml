@@ -9,13 +9,23 @@
 %br
 = link_to "New Member", new_member_path
 %h1 All Members
-%table
-	- i = 0
-	- @all_members.each do |m|
-		- i = i + 1
+%table#mem-table.tablesorter{:border => 0, :cellpadding => 0, :cellspacing => 1}
+	%thead
 		%tr
-			%td= i
-			%td= link_to m.firstname + " " + m.lastname, m
-			%td= link_to m.email, "mailto:" + m.email
-			%td= m.grade || "Coach"
-			%td= 'FORGOT TO LOG YESTERDAY' unless m.logged_yesterday?
+			- (['#'] + %w(Name Email Grade)).each do |head|
+				%th.header= head
+			- %w(Distance Duration Pace).each do |avg|
+				%th.header= "Avg. #{avg}"
+			%th.header Log Frequency
+	%tbody
+		- @all_members.each_with_index do |m, i|
+			%tr
+				%td= i + 1
+				%td= link_to m.firstname + " " + m.lastname, m
+				%td= link_to m.email, "mailto:" + m.email
+				%td= m.grade || "Coach"
+				- calcs = m.calcs
+				%td= calcs[:avg_dist]
+				%td= calcs[:avg_dur]
+				%td= calcs[:avg_pace]
+				%td= m.log_freq

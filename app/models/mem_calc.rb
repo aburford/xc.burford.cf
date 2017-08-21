@@ -1,4 +1,5 @@
 class MemCalc < ApplicationRecord
+  include ApplicationHelper
   belongs_to :member
 
 	validates :calc_type, uniqueness: { scope: :member_id }
@@ -44,12 +45,6 @@ class MemCalc < ApplicationRecord
 		calcs[CALC_TYPE.index(:avg_dist)].set avg_dist
 		calcs[CALC_TYPE.index(:avg_dur)].set avg_dur
 		calcs[CALC_TYPE.index(:avg_pace)].set avg_pace
-	end
-
-	private 
-
-	def self.format_pace(seconds)
-		"#{(seconds.round / 60)}:#{(seconds % 60).round.to_s.rjust(2, '0')}"
 	end
 
 end
