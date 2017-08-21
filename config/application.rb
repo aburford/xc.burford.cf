@@ -14,5 +14,6 @@ module Xc
     config.time_zone = 'Eastern Time (US & Canada)'
     config.active_record.default_timezone = :local
     config.assets.precompile += %w(members.js.rb stats.js.rb)
+    config.public_file_server.enabled = true
   end
 end
