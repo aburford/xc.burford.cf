@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+	include ApplicationHelper
 	def new
 
 	end
@@ -15,8 +16,21 @@ class MembersController < ApplicationController
 	end
 
 	def index
-		mem = Member.order(grade: :desc, firstname: :asc).all
+		logger.debug params.inspect
+		params.permit(:options)
+		order = params[:options] if params[:options]
+		case order
+		when 'avg_dist'
+			mem = Member.order(avg_dist: :desc, firstname: :asc).all
+		when 'avg_dur'
+			mem = Member.order(avg_dur: :asc, firstname: :asc).all
+		when 'avg_pace'
+			mem = Member.order(avg_pace: :asc, firstname: :asc).all
+		else
+			mem = Member.order(grade: :desc, firstname: :asc).all
+		end
 		@mail = "mailto:"
+		@calcs
 		mem.each do |m|
 			@mail += m.email + ","
 		end
