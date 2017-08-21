@@ -46,6 +46,9 @@ class MembersController < ApplicationController
 	def create
 		@member = Member.new(member_params)
   	@member.save
+		(0..4).each do |c|
+			MemCalc.new(member_id: @member.id, value: 0, calc_type: c).save
+		end
   	redirect_to @member
 	end
 

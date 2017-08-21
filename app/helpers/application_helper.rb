@@ -1,4 +1,5 @@
 module ApplicationHelper
+	
 	def format_pace(seconds)
 		"#{(seconds.round / 60)}:#{(seconds % 60).round.to_s.rjust(2, '0')}"
 	end
