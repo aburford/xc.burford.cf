@@ -23,6 +23,12 @@ class Member < ApplicationRecord
 		format_perc(runs.where("date >= '2017-06-15'").count / (Date.today - FIRST_DAY).to_f)
 	end
 
+	def summer_mileage
+		tot = 0
+		runs.where("date >= '2017-06-15'").each {|r| tot += r.distance}
+		tot.round 2
+	end
+
 	def logged_yesterday?
 		runs.exists?(date: Date.today.prev_day)
 	end

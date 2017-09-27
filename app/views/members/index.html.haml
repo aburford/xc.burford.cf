@@ -17,6 +17,7 @@
 			- %w(Distance Duration Pace).each do |avg|
 				%th.header= "Avg. #{avg}"
 			%th.header Log Frequency
+			%th.header Summer Mileage
 	%tbody
 		- @all_members.each_with_index do |m, i|
 			%tr
@@ -29,3 +30,4 @@
 				%td= calcs[:avg_dur]
 				%td= calcs[:avg_pace]
 				%td= m.log_freq
+				%td= m.summer_mileage
