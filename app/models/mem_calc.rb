@@ -6,15 +6,6 @@ class MemCalc < ApplicationRecord
 
   CALC_TYPE = [:tot_dist, :tot_dur, :avg_dist, :avg_dur, :avg_pace].freeze
 
-  def self.vals_for(mem)
-  	vals = {}
-  	keys = CALC_TYPE.to_enum
-  	mem.mem_calcs.each {|v| vals[keys.next] = v.value}
-  	vals[:avg_dur] = format_pace vals[:avg_dur]
-  	vals[:avg_pace] = format_pace vals[:avg_pace]
-  	vals
-	end
-
 	def set(val)
 		self[:value] = val
 		save
