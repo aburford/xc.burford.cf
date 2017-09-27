@@ -28,7 +28,9 @@ class Stats::StatsController < ApplicationController
 	def logarun
 		@days = []
 		(1..5).each do |ago|
-			@days[ago - 1] = Run.where(date: Date.today - ago).order(:days_late)
+			slackers = []
+			Member.all.each {|m| slackers << m.name unless m.runs.exists?(date: Date.today - ago)}
+			@days[ago - 1] = [Run.where(date: Date.today - ago).order(:days_late), slackers]
 		end
 	end
 

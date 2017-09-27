@@ -1,6 +1,6 @@
 = link_to "Back", stats_root_path
 %h1 LogARun Stats
-- @days.each_with_index do |run, i|
+- @days.each_with_index do |day, i|
 	%h2= i == 0 ? "People who logged yesterday:" : "People who logged #{i + 1} days ago:"
 	%table
 		%tr
@@ -8,7 +8,9 @@
 				%b Name
 			%td
 				%b Days Late
-		- run.each do |r|
+		- day[0].each do |r|
 			%tr
 				%td= r.member.name
 				%td= r.days_late == 0 ? 'On Time' : r.days_late
+	%p= "#{day[1].count} slackers: #{day[1].join(', ')}"
+	%p= "#{(100 - day[1].count/Member.all.count.to_f*100).round 2}\% of the team logged"

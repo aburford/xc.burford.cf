@@ -34,8 +34,7 @@ class MemCalc < ApplicationRecord
 		d = 0
 		t = 0
 		mem.runs.where("distance != 0 AND duration != 0").each do |r|
-			d += r.distance
-			t += r.duration
+			d, t = d + r.distance, t + r.duration if r.duration / r.distance > 240
 		end
 		avg_pace = (t / d).round(2) unless d.zero?
 		avg_pace ||= 0

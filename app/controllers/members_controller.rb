@@ -32,7 +32,7 @@ class MembersController < ApplicationController
 		@mail = "mailto:"
 		@calcs
 		mem.each do |m|
-			@mail += m.email + ","
+			@mail += m.email + "," unless m.email.empty?
 		end
 		@all_members = mem
 	end
@@ -45,6 +45,7 @@ class MembersController < ApplicationController
 
 	def create
 		@member = Member.new(member_params)
+		@member.username = @member.lastname + @member.firstname[0,2] if @member.firstname.length >= 2
   	@member.save
 		(0..4).each do |c|
 			MemCalc.new(member_id: @member.id, value: 0, calc_type: c).save
