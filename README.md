@@ -1,1 +1,1 @@
-This is all of the code for my website located at https://xc.burford.cf
+This is all of the code for my website previously hosted at https://xc.burford.cf
